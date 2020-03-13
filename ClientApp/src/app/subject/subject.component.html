@@ -1,0 +1,29 @@
+<h1 id="tableLabel">Subjects</h1>
+
+<p *ngIf="!subjects"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="subjects">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of subjects">
+      <td> {{ s.id}}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.level }}</td>
+      <td>{{ s.description}}</td>
+    </tr>
+  </tbody>
+</table>
+Name
+<input [(ngModel)]="newSubject.name" name="Name" />
+Level
+<input [(ngModel)]="newSubject.level" name="Level" />
+Description
+<input [(ngModel)]="newSubject.description" name="Description" />
+<button (click)="save()">Save</button>
