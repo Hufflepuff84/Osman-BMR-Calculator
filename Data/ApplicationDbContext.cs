@@ -53,6 +53,6 @@ namespace capstone.Data
                 new Subject { Id = 4, Name = "English", Level = "three", Description = "This course teaches English Composition" }
         );
         }
-
+// comment for github test. 
     }
 }
