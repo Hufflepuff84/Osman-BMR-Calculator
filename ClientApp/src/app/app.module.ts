@@ -27,7 +27,7 @@ import {PersonComponent} from './person/person.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    
+    PersonComponent,
     StudentsComponent,
     TeacherComponent,
     SubjectComponent
