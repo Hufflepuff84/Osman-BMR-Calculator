@@ -14,3 +14,5 @@ a {
     background-color: #1b6ec2;
     border-color: #1861ac;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

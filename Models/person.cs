@@ -11,12 +11,14 @@ namespace capstone.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int Id { get; set; }
-        public string Gender { get; set; }
-        public int Age { get; set; }
-        public int Weight {get; set;}
+        public int id { get; set; }
+        public string name { get; set; }
+        public int age { get; set; }
+        public int weight {get; set;}
 
-        public int Height {get; set;}
+        public int height {get; set;}
+
+        public int bmr {get; set;}
     }
 }
 // comments!
