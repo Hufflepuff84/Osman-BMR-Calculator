@@ -1,35 +1,18 @@
-<h1>BMR</h1>
-
-<p>This page is for counting your basal metabolic rate.</p>
-
-{{ bmr }}
-<br>
-
-Gender
-<input [(ngModel)]="newPerson.Gender" name="gender">
-
-Age
-<input [(ngModel)]="newPerson.Age" name="age">
-
-Weight
-<input [(ngModel)]="newPerson.Weight" name="weight">
-
-Height
-<input [(ngModel)]="newPerson.Height" name="height">
-
-{{ values }}
 <html>
     <head>
-        <title> BMR Calculator </title>
-        <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
-        </script>
+    <title> BMR Calculator </title>
+    <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+    </script>
     </head>
     <h2>Please enter your weight</h2>
-  <input type ="number" name="num1">
-  <h2>Please enter your height</h2>
-  <input type="number" name="num2">
-  <h2>Please enter your age</h2>
-  <input type ="number" name="numb3">
-  <button>Calculate</button>
+    <input type="number" name="num1" [(ngModel)]="num1">
+    <h2>Please enter your height</h2>
+    <input type="number" name="numb2" [(ngModel)]="num2">
+    <h2>Please enter your age</h2>
+    <input type = "number" name ="numb3" [(ngModel)]="num3">
+    <br><br>
+    <button (click)="caclulate()">Calculate</button>
+    <br>
+    <h3>Result BMR :{{num4}} </h3>
     </body>
-</html>
+    </html>
