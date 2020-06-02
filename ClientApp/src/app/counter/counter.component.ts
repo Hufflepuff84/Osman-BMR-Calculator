@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.sass']
+    selector: 'app-counter',
+    templateUrl: './counter.component.html',
+    
+
+    
 })
 export class CounterComponent {
     title = 'My BMR Calculator';
