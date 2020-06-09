@@ -1,0 +1,14 @@
+
+<div>
+Pleae enter your Age in years:
+<input [(ngModel)]="newBmr.Age" name="Age" />
+<br>
+Please enter your Weight in kilograms:
+<input [(ngModel)]="newBmr.Weight" name="Weight" />
+<br>
+Please enter your Height in centimeters
+<input [(ngModel)]="newBmr.Height" name ="Height" />
+<br>
+<button (click)="calculate()">Calculate</button>
+<p> your BMR is: {{result}}</p>
+</div>

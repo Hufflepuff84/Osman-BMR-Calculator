@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
+import { bmrComponent } from './bmr/bmr.component';
 
 import { StudentsComponent } from './students/students.component';
 import { ApiAuthorizationModule } from '../api-authorization/api-authorization.modlue';
@@ -21,12 +21,13 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { SubjectComponent } from './subject/subject.component';
 import {PersonComponent} from './person/person.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
+    bmrComponent,
     PersonComponent,
     StudentsComponent,
     TeacherComponent,
@@ -41,7 +42,7 @@ import {PersonComponent} from './person/person.component';
     ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: 'counter', component: bmrComponent },
       { path: 'person', component: PersonComponent, canActivate: [AuthorizeGuard]},
       { path: 'students', component: StudentsComponent, canActivate: [AuthorizeGuard] },
       { path: 'teachers', component: TeacherComponent, canActivate: [AuthorizeGuard] },
