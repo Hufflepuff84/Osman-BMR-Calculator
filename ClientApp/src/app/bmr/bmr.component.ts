@@ -22,7 +22,7 @@ export class bmrComponent implements OnInit {
         this.bmr = await this.http.get<bmr[]>(this.baseUrl + 'bmr').toPromise();
     }
      calculate() {
-        let result = this.newBmr.Age + this.newBmr.Weight + this.newBmr.Height;
+        let result = (this.newBmr.Weight*10) + (this.newBmr.Height*6.25) - (this.newBmr.Age*5) + 5;
         console.log ("Your BMR is" + result);
         this.result = result;
         
