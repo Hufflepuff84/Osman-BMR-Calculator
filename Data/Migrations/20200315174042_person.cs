@@ -12,9 +12,12 @@ namespace capstone.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Gender = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
                     Age = table.Column<int>(nullable: false),
-                    Weight = table.Column<int>(nullable: false)
+                    Weight = table.Column<int>(nullable: false),
+                    Height = table.Column<int>(nullable: false),
+                    BMR = table.Column<int>(nullable: false)
+
                 },
                 constraints: table =>
                 {

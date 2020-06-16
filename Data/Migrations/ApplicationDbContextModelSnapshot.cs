@@ -296,23 +296,26 @@ namespace capstone.Data.Migrations
 
             modelBuilder.Entity("capstone.Models.Person", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Age")
+                    b.Property<int>("age")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Gender")
+                    b.Property<int>("bmr")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("height")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("name")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Height")
+                    b.Property<int>("weight")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Weight")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Persons");
                 });

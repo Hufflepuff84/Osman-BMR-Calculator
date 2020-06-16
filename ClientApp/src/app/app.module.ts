@@ -43,7 +43,7 @@ import {PersonComponent} from './person/person.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: bmrComponent },
-      { path: 'person', component: PersonComponent, canActivate: [AuthorizeGuard]},
+      { path: 'persons', component: PersonComponent, canActivate: [AuthorizeGuard]},
       { path: 'students', component: StudentsComponent, canActivate: [AuthorizeGuard] },
       { path: 'teachers', component: TeacherComponent, canActivate: [AuthorizeGuard] },
       { path: 'subjects', component: SubjectComponent, canActivate: [AuthorizeGuard] }
