@@ -14,11 +14,12 @@ namespace capstone.Models
         public int id { get; set; }
         public string name { get; set; }
         public int age { get; set; }
-        public int weight {get; set;}
-
-        public int height {get; set;}
-
-        public int bmr {get; set;}
+        public int weight { get; set; }
+        public int height { get; set; }
+        public int bmr { get; set; }
+        public DateTime created { get; set; }
+        public string userId { get; set; }
+        public ApplicationUser User { get; set; }
     }
 }
 // comments!

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using capstone.Data;
 
 namespace capstone.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200617232633_remove-tables")]
+    partial class removetables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -294,40 +296,6 @@ namespace capstone.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("capstone.Models.Person", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("age")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("bmr")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("created")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("height")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("userId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("weight")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("userId");
-
-                    b.ToTable("Persons");
-                });
-
             modelBuilder.Entity("capstone.Models.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -501,13 +469,6 @@ namespace capstone.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("capstone.Models.Person", b =>
-                {
-                    b.HasOne("capstone.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("userId");
                 });
 #pragma warning restore 612, 618
         }
