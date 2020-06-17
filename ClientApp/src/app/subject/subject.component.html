@@ -1,29 +1,33 @@
-<h1 id="tableLabel">Subjects</h1>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
 
-<p *ngIf="!subjects"><em>Loading...</em></p>
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="subjects">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Level</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let s of subjects">
-      <td> {{ s.id}}</td>
-      <td>{{ s.name }}</td>
-      <td>{{ s.level }}</td>
-      <td>{{ s.description}}</td>
-    </tr>
-  </tbody>
-</table>
-Name
-<input [(ngModel)]="newSubject.name" name="Name" />
-Level
-<input [(ngModel)]="newSubject.level" name="Level" />
-Description
-<input [(ngModel)]="newSubject.description" name="Description" />
-<button (click)="save()">Save</button>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
