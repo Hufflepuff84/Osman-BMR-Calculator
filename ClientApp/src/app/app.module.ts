@@ -13,7 +13,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { bmrComponent } from './bmr/bmr.component';
 
-import { StudentsComponent } from './students/students.component';
+
 import { ApiAuthorizationModule } from '../api-authorization/api-authorization.modlue';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
@@ -29,7 +29,7 @@ import {PersonComponent} from './person/person.component';
     HomeComponent,
     bmrComponent,
     PersonComponent,
-    StudentsComponent,
+   
     TeacherComponent,
     SubjectComponent
   ],
@@ -44,7 +44,7 @@ import {PersonComponent} from './person/person.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: bmrComponent },
       { path: 'persons', component: PersonComponent, canActivate: [AuthorizeGuard]},
-      { path: 'students', component: StudentsComponent, canActivate: [AuthorizeGuard] },
+      
       { path: 'teachers', component: TeacherComponent, canActivate: [AuthorizeGuard] },
       { path: 'subjects', component: SubjectComponent, canActivate: [AuthorizeGuard] }
     ])
