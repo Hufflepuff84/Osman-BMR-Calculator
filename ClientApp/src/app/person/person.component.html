@@ -1,8 +1,8 @@
 <h1 id="tableLabel">Persons</h1>
 
-<p *ngIf="!persons"><em>Loading...</em></p>
+<p *ngIf="!person"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="persons">
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="person">
   <thead>
     <tr>
       <th>Id</th>
@@ -14,27 +14,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let s of persons">
-      <td> {{ s.id}}</td>
-      <td>{{ s.name }}</td>
-      <td>{{ s.age }}</td>
-      <td>{{ s.height}}</td>
+    <tr *ngFor="let s of person">
+      <td> {{s.id}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.age}}</td>
+      <td>{{s.height}}</td>
       <td>{{s.weight}}</td>
       <td>{{s.bmr}}</td>
     </tr>
   </tbody>
 </table>
-Id
-<input [(ngModel)]="newPerson.id" name="Id" />
-Name
-<input [(ngModel)]="newPerson.name" name="Name" />
-Age
-<input [(ngModel)]="newPerson.age" name="Age" />
-Height
-<input [(ngModel)]="newPerson.height" name ="Height"/>
-Weight 
-<input [(ngModel)]="newPerson.weight" name="Weight"/>
-BMR 
-<input [(ngModel)]="newPerson.bmr" name="BMR"/>
-
-<button (click)="save()">Save</button>

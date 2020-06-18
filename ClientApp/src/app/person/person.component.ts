@@ -1,28 +1,20 @@
 
 import { Component, Inject, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {Person} from '../interfaces/Person';
+import { Person } from '../interfaces/Person';
+import { PersonService } from '../services/person.service';
 
 @Component({
     selector: 'app-person',
     templateUrl: './person.component.html'
 })
 export class PersonComponent implements OnInit {
-    public persons: Person[];
-    public newPerson: Person = {id:0, name:'', age:0, height:0, weight:0, bmr:0};
+    public person: Person[];
 
-    constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
+    constructor(private personService: PersonService) {
 
     }
     async ngOnInit() {
-        this.persons = await this.http.get<Person[]>(this.baseUrl + 'person').toPromise();
+        this.person = await this.personService.getPerson();
     }
-    async save() {
-        await this.http.post<Person[]>(this.baseUrl + 'person', this.newPerson).toPromise();
-        this.newPerson = { id:0 ,name:'',age:0,weight:0,height:0,bmr:0 };
-        this.persons = await this.http.get<Person[]>(this.baseUrl + 'person').toPromise();
-    }
-
-
 }
 
