@@ -1,10 +1,10 @@
 export interface Person {
-    id: number;
+    id?: number;
     name: string;
     age: number;
     weight: number;
     height: number;
     bmr: number;
     created: Date;
-    userId: string;
+    userId?: string;
 }
