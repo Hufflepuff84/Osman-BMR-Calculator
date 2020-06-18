@@ -45,7 +45,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {id: 12, name: 'Peter Jennings', age: 53, weight:75, height: 168, bmr: 1540},
   {id: 13, name: 'Larry King', age: 90, weight:55, height: 162, bmr: 1117.5},
   {id: 14, name: 'Sam Summers', age: 56, weight:58, height: 150, bmr: 1242.5},
-  {id: 15, name: 'Hillary CLinton', age: 63, weight:55 , height: 150, bmr: 1177.5},
+  {id: 15, name: 'Hal CLinton', age: 63, weight:55 , height: 150, bmr: 1177.5},
   {id: 16, name: 'Victor Torrence', age: 33, weight:45, height: 155, bmr: 1258.75},
   {id: 17, name: 'Jack Torrence', age: 33, weight:54, height: 165, bmr: 1411.25},
   {id: 18, name: 'Freddy Johnson', age: 22, weight:135, height: 170, bmr: 2307},
