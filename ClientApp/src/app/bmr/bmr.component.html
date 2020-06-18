@@ -1,5 +1,30 @@
 
-<div>
+
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Age</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="string" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Weight</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Height</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+    <button (click)="calculate()">Calculate</button>
+    <p> your BMR is: {{result}}</p>
+  </form>
+<!-- <div>
 Pleae enter your Age in years:
 <input [(ngModel)]="newBmr.Age" name="Age" type = "number" />
 <br>
@@ -13,4 +38,4 @@ Please enter your Height in centimeters
 <button (click)="calculate()">Calculate</button>
 <p> your BMR is: {{result}}</p>
 </div>
-<h6> Congratulations! Now click on the "Persons" tab to enter in your information to our database!</h6>
+<h6> Congratulations! Now click on the "Persons" tab to enter in your information to our database!</h6> -->
