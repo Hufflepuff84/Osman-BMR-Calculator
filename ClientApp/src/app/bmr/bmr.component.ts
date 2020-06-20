@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, } from '@angular/core'
+import { Component, Inject, OnInit, } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,8 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class bmrComponent implements OnInit {
     public bmr: bmr[];
-    public newBmr: bmr = {Age:0, Weight:0, Height:0};
-    result;
+    public newBmr: bmr = {Age: 0, Weight: 0, Height: 0};
+    public result: number;
+    public name: string;
+
+    public get Name(): string {
+        return this.name;
+    }
 
     constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
 
@@ -22,16 +27,14 @@ export class bmrComponent implements OnInit {
         this.bmr = await this.http.get<bmr[]>(this.baseUrl + 'bmr').toPromise();
     }
      calculate() {
-        let result = (this.newBmr.Weight*10) + (this.newBmr.Height*6.25) - (this.newBmr.Age*5) + 5;
-        console.log ("Your BMR is" + result);
+        console.log(this.newBmr);
+        const result = (this.newBmr.Weight * 10) + (this.newBmr.Height * 6.25) - (this.newBmr.Age * 5) + 5;
+        console.log ('Your BMR is ' + result);
         this.result = result;
-        
     }
 
 
 }
-
-
 
 interface bmr {
     Age: number;
