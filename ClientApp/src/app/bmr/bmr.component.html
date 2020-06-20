@@ -19,5 +19,5 @@
   <div class="mt-4 mb-4">
     <h3>Your BMR is: {{result}}</h3>
   </div>
-  <button class="btn btn-secondary" [disabled]="Name === undefined">Save</button>
+  <button class="btn btn-secondary" (click)="save()" [disabled]="Name === undefined">Save</button>
 </form>

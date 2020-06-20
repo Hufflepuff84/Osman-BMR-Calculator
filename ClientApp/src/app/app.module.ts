@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { bmrComponent } from './bmr/bmr.component';
+import { BmrComponent } from './bmr/bmr.component';
 import { ApiAuthorizationModule } from '../api-authorization/api-authorization.modlue';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
@@ -20,7 +20,7 @@ import { PersonComponent } from './person/person.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    bmrComponent,
+    BmrComponent,
     PersonComponent,
   ],
   imports: [
@@ -32,7 +32,7 @@ import { PersonComponent } from './person/person.component';
     ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'mybmr', component: bmrComponent },
+      { path: 'mybmr', component: BmrComponent },
       { path: 'persons', component: PersonComponent, canActivate: [AuthorizeGuard] },
     ])
   ],

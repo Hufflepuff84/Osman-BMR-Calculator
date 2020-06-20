@@ -5,7 +5,6 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="person">
   <thead>
     <tr>
-      <th>Id</th>
       <th>Name</th>
       <th>Age</th>
       <th>Height</th>
@@ -15,7 +14,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let s of person">
-      <td> {{s.id}}</td>
       <td>{{s.name}}</td>
       <td>{{s.age}}</td>
       <td>{{s.height}}</td>
