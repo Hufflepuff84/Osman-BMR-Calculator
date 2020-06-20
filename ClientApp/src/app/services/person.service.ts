@@ -18,4 +18,8 @@ export class PersonService {
   async addPerson(person: Person): Promise<Person> {
     return await this.httpClient.post<Person>(`${this.baseUrl}person`, person).toPromise();
   }
+
+  async getAllPersons(): Promise<Person[]> {
+    return await this.httpClient.get<Person[]>(`${this.baseUrl}person/all`).toPromise();
+  }
 }
