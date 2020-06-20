@@ -12,9 +12,7 @@
     <input type="number" name="weight" class="form-control" [(ngModel)]="newBmr.Weight">
   </div>
   <div class="form-group">
-    <label>Please enter your Height in centimeters: (for example if you are 6 feet 6 inches tall, multiply the 6 feet
-      times 12 to get inches then multiply that by 2.54 to get it in centimeters plus the 6 inches multiplied by 2.54 cm
-      and add that to previous centimeter calculation)</label>
+    <label>Please enter your Height in centimeters: (take your height in feet and multiply by 30.48 take your inches and multiply by 2.54 and add to the first multiplication)</label>
     <input type="number" name="height" class="form-control" [(ngModel)]="newBmr.Height">
   </div>
   <button class="btn btn-primary" (click)="calculate()">Calculate</button>
