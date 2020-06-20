@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\netcoreapp3.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/a20d13b6-6987-45a2-bbdc-d5f3a5b24819/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/bmrapp"
+}
