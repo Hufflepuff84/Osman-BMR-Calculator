@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit, } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {bmr} from '../interfaces/bmr'
 @Component({
     selector: 'app-bmr',
     templateUrl: './bmr.component.html'
@@ -34,10 +34,4 @@ export class bmrComponent implements OnInit {
     }
 
 
-}
-
-interface bmr {
-    Age: number;
-    Weight: number;
-    Height: number;
 }
