@@ -37,7 +37,7 @@ export class BmrComponent implements OnInit {
 
     calculate() {
         console.log(this.newBmr);
-        const result = (this.newBmr.Weight * 10) + (this.newBmr.Height * 6.25) - (this.newBmr.Age * 5) + 5;
+        const result = (this.newBmr.Weight * 4.536) + (this.newBmr.Height * 15.88) - (this.newBmr.Age * 5) + 5;
         console.log('Your BMR is ' + result);
         this.result = result;
     }
