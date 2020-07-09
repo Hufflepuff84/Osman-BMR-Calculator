@@ -32,7 +32,7 @@ import { PersonComponent } from './person/person.component';
     ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'mybmr', component: BmrComponent },
+      { path: 'mybmr', component: BmrComponent, canActivate: [AuthorizeGuard] },
       { path: 'persons', component: PersonComponent, canActivate: [AuthorizeGuard] },
     ])
   ],
